@@ -19,9 +19,7 @@ const usePlaid = () => {
     const exchangePublicTokenForAccessToken = async () => {
         try{
             const response =await fetchAccessToken(public_token)
-            console.log(response)
             if(response.session){
-                console.log(response.session)
                dispatch(setSession(response.session))
             }
         }catch(error){
@@ -68,7 +66,6 @@ const usePlaid = () => {
     </button>
   );
 
-  console.log(ready)
   return { link_token, loading, generateLinkToken,openModelButton,modal:{ready,open} };
 };
 export default usePlaid;

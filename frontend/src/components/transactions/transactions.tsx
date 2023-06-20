@@ -27,7 +27,6 @@ const Transactions = () => {
     setLoading(true);
     try {
       const { data } = await getApi(TRANSACTION_URL);
-      console.log(data);
       setTransaction(data);
     } catch (error) {
       console.log(error);

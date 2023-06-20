@@ -14,7 +14,6 @@ const AvatarNavigation = ({ navigation, classNames }: IAvatarNavigateProps) => {
     generateLinkToken,
     modal: { open, ready },
   } = usePlaid();
-  console.log(ready);
   const { logout } = useAuth();
   useEffect(() => {
     generateLinkToken();

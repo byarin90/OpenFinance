@@ -7,7 +7,6 @@ const Protected = () => {
     const protectedRoute = async () => {
         await checkAuth()
     }
-    console.log(session)
    useEffect(() => {
     protectedRoute()
    }, [localStorage['session']])
